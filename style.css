@@ -1,0 +1,132 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #8ecfdc; /* Light gray background for the whole page */
+    color: #333;
+}
+  
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+  
+header h1 {
+    margin-bottom: 0.5rem;
+}
+  
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+  
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+/* Main content and section styling */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+  
+/* Blocked out sections */
+.content-section {
+    background-color: #fff; /* White background for contrast */
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.content-section h2 {
+    margin-bottom: 1rem;
+    color: #444;
+}
+  
+/* Project Card Styles */
+.project {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+  
+.project:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+  
+  .project a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+  /* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Project image styling */
+.project-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+  
+  /* Video container for responsive YouTube video */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+  
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content-section:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+  
+  .content-section a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Headshot Image Styling */
+.headshot {
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    margin: 1rem auto; /* Centers the image and adds some spacing */
+}
