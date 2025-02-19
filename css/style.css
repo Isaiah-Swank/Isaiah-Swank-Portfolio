@@ -116,7 +116,7 @@ footer {
 }
   
   .content-section a {
-    color: #007acc;
+    color: #8ecfdc;
     text-decoration: none;
     font-weight: bold;
 }
@@ -129,4 +129,18 @@ footer {
     height: auto;
     border-radius: 50%; /* Makes the image circular */
     margin: 1rem auto; /* Centers the image and adds some spacing */
+}
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    transition: background-color 0.3s ease;
+}
+  
+  .btn:hover {
+    background-color: #6d6d6d;
 }
