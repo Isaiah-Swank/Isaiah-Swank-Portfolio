@@ -4,26 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Isaiah Swank's Portfolio</title>
-  <!-- Link to the CSS file -->
+
+  <!-- SEO & Social Share -->
+  <meta name="description" content="Isaiah Swank — Software Engineer. Projects in web, games, and Python with a focus on UX and practical problem solving.">
+  <meta property="og:title" content="Isaiah Swank — Software Engineer">
+  <meta property="og:description" content="Selected projects in web, games, and Python.">
+  <meta property="og:type" content="website">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header>
     <h1>Isaiah Swank's Portfolio</h1>
-    <nav>
+    <nav aria-label="Primary">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <!-- Theme toggle -->
+    <button id="themeToggle" class="btn btn--sm" aria-label="Toggle theme">Theme</button>
   </header>
 
-  <main>
+  <main id="main" class="container">
     <section id="about" class="content-section">
-      <h2>About Me</h2>
+      <h2 class="section-title">About Me</h2>
       <!-- Headshot image -->
-      <img src="files/headshot.png" alt="Isaiah Swank Headshot" class="headshot">
+      <img src="files/headshot.png" alt="Isaiah Swank Headshot" class="headshot" loading="lazy" decoding="async" width="200" height="200">
       <p>
         Hi, I'm Isaiah Swank. I am a recent graduate of Northern Arizona University with my bachelors degree in Software Engineering. My personal mission statement is to always be involved in my community wherever I am at, being a positive influence, and building people up to be the best versions of themselves.
         I was the team lead on the award winning project, MealsMyWay. I am currently looking to start my career in the tech industry, with the dream goal of working on projects that have positive impacts on people's lives. I am passionate about UX and UI, and proficient in the webstack trio of HTML/CSS/JS as well as Python, C++, C, and SQL. 
@@ -31,150 +46,169 @@
       </p>
 
       <p>
-        <a href="files/Isaiah-Swank-Resume.pdf" target="_blank" class="btn">
+        <a href="files/Isaiah-Swank-Resume.pdf" target="_blank" class="btn" rel="noopener noreferrer">
           Download My Resume
         </a>
       </p>
     </section>
 
-    <section id="projects" class="content-section">
-      <h2>Projects</h2>
+    <section id="projects" class="content-section container">
+      <h2 class="section-title">Projects</h2>
 
-      <div class="project">
+      <!-- Filter chips -->
+      <div class="filters" aria-label="Project filters">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="web">Web</button>
+        <button class="chip" data-filter="python">Python</button>
+        <button class="chip" data-filter="unity">Unity</button>
+        <button class="chip" data-filter="uiux">UI/UX</button>
+        <button class="chip" data-filter="algorithms">Algorithms</button>
+        <button class="chip" data-filter="games">Games</button>
+      </div>
+
+      <div class="project" data-tags="javascript firebase uiux soa web">
+        <div class="meta">
+          <span>Role: Team Lead</span> · <span>Year: 2024 - 2025</span>
+        </div>
         <h3>MealsMyWay - NAU 2024 Engineering Fest 1st Place</h3>
         <p>
           This was my Senior Capstone project. It is a meal-prepping web and mobile application with a focus on maximum flexibility for the user and reducing food waste. I was the team lead for this project and had a range of responsibilities.
           For the product aspect, I designed the service-oriented architecture that the system uses, was responsible for designing the UI/UX of the system, as well as the functionality for the calendar, pantry, and settings features.
           On the management side, I was in charge of communicating with the client, arranging meetings with the client and weekly as a team, and properly delegating tasks among team members to maximize team strengths. The project won 1st place at NAU's 2024 Engineering Fest, and I am very proud of the work we accomplished as a team.
         </p>
-        <div class="video-container">
-          <iframe width="560" height="315"
-                  src="https://www.youtube.com/embed/mLnl1C26g4Q"
-                  title="MealsMyWay - Alpha version"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-          </iframe>
+        <div class="badges">
+          <span class="badge">JavaScript</span>
+          <span class="badge">PostgreSQL</span>
+          <span class="badge">UI/UX</span>
+          <span class="badge">SOA</span>
         </div>
-        <p>
-          <a href="https://github.com/Isaiah-Swank/MealsMyWay.git" target="_blank">View on GitHub</a>
-        </p>
+        <div class="video-container">
+          <!-- Lite YouTube embed -->
+          <div class="yt-lite" data-id="mLnl1C26g4Q" aria-label="Play video: MealsMyWay - Alpha version"></div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Isaiah-Swank/MealsMyWay.git" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
       </div>
 
-      <div class="project">
+      <div class="project" data-tags="unity csharp gamedesign games">
+        <div class="meta">
+          <span>Role: Gameplay</span> · <span>Year: 2024</span>
+        </div>
         <h3>Space Shooter</h3>
         <p>
           This project is a space shooter game built in Unity using C#. The goal of the game is to stay alive as long as possible, avoiding and shooting space ships to stay alive.
           There are 3 different levels, the easy level has slow moving ships that disappear at the bottom of the screen. The medium level has the ships bouncing back and forth, only disappearing when being shot.
           The hard level has the enemy ships gaining speed as they bounce off the borders, along with asteroids that fly in any direction across the screen that hurt you. If too many enemys appear on the hard level you automatically lose.
           The skills I gained from this game was rotational display and physics, dynamic health display, and creative level design.
-
         </p>
-  
-        <div class="video-container">
-            <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/P_SsXIoSlEI"
-                    title="Mission Demolition"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
+        <div class="badges">
+          <span class="badge">Unity</span>
+          <span class="badge">C#</span>
+          <span class="badge">Game Design</span>
         </div>
-  
-        <p>
-            <a href="https://isaiah-swank.github.io/CS413-Assignment-6/" target="_blank">Play Game</a>
-        </p>
+        <div class="video-container">
+          <div class="yt-lite" data-id="P_SsXIoSlEI" aria-label="Play video: Space Shooter"></div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://isaiah-swank.github.io/CS413-Assignment-6/" target="_blank" rel="noopener noreferrer">Play Game</a>
+        </div>
       </div>
 
-      <div class="project">
+      <div class="project" data-tags="unity csharp physics gamedesign games">
+        <div class="meta">
+          <span>Role: Gameplay</span> · <span>Year: 2024</span>
+        </div>
         <h3>Mission Demolition - Discount Angry Birds</h3>
         <p>
           This project is a mission demolition game built in Unity using C#. The goal is to fire projectiles at the targets to hit the green targets using the slingshot physics.
           The focus for me on this game was good level design, projectile physics and how to make engaging power-ups/features. I implemented a speed boost feature as well as a split projectile feature, both of which activate only on specific levels.
           The video below shows a playthrough of the game with a verbal explanation of the features.
         </p>
-  
-        <div class="video-container">
-            <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/GA7zRQiHxJQ"
-                    title="Mission Demolition"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
+        <div class="badges">
+          <span class="badge">Unity</span>
+          <span class="badge">C#</span>
+          <span class="badge">Physics</span>
         </div>
-  
-        <p>
-            <a href="https://isaiah-swank.github.io/CS413-Assignment-5/" target="_blank">Play Game</a>
-        </p>
+        <div class="video-container">
+          <div class="yt-lite" data-id="GA7zRQiHxJQ" aria-label="Play video: Mission Demolition"></div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://isaiah-swank.github.io/CS413-Assignment-5/" target="_blank" rel="noopener noreferrer">Play Game</a>
+        </div>
       </div>
 
-
-      <div class="project">
+      <div class="project" data-tags="python pygame gameui games">
+        <div class="meta">
+          <span>Role: Developer</span> · <span>Year: 2025</span>
+        </div>
         <h3>Generative AI Blackjack Teacher - V1</h3>
         <p>
           This Python project is a playable Blackjack game that teaches you how to count cards (using Pygame). The goal of this project is to learn how to integrate generative AI (Deepseek in this scenario) into a system.
           Currently, I have a playable UI using art I created that keeps track of the running count and true count. I am still working on/learning how to integrate the AI, but after many iterations, the game is completely playable outside of that.
         </p>
-
-        <div class="video-container">
-            <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/NIpGOtVCfLU"
-                    title="Blackjack AI Coach"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">Pygame</span>
+          <span class="badge">Game UI</span>
         </div>
-
-        <p>
-            <a href="https://github.com/Isaiah-Swank/Python-BlackJack.git" target="_blank">View on GitHub</a>
-        </p>
+        <div class="video-container">
+          <div class="yt-lite" data-id="NIpGOtVCfLU" aria-label="Play video: Blackjack AI Coach"></div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Isaiah-Swank/Python-BlackJack.git" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
       </div>
 
-      <div class="project">
+      <div class="project" data-tags="python pygame bfs algorithms games">
+        <div class="meta">
+          <span>Role: Developer</span> · <span>Year: 2025</span>
+        </div>
         <h3>Boggle with AI Solver</h3>
         <p>
           This is a playable word-solving game made in Python using Pygame. It is similar to the game Boggle, but without the timer. You can try for as long as you want to find all of the words; however, if you press the "give up" button
           it will show you all of the possible words from the current board. The program uses a BFS to search all possible moves on the board to ensure completeness.
           It dynamically displays the words in alphabetical order and updates the score and word list. After it is done, it pauses for 5 seconds for the user to see the max score, then it resets so you can play again.
         </p>
-        <div class="video-container">
-          <iframe width="560" height="315"
-                  src="https://www.youtube.com/embed/oQNO5R1-LII"
-                  title="Blackjack AI Coach"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-          </iframe>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">Pygame</span>
+          <span class="badge">BFS</span>
         </div>
-        <p>
-          <a href="https://github.com/Isaiah-Swank/Boggle-AI.git" target="_blank">View on GitHub</a>
-        </p>
+        <div class="video-container">
+          <div class="yt-lite" data-id="oQNO5R1-LII" aria-label="Play video: Boggle AI Solver"></div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Isaiah-Swank/Boggle-AI.git" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
       </div>
 
-      <div class="project">
-        <!-- Fixed 'simplied' to 'simplified' -->
+      <div class="project" data-tags="python pygame animation games">
+        <div class="meta">
+          <span>Role: Developer</span> · <span>Year: 2025</span>
+        </div>
         <h3>Yahtzee - Multiplayer Game</h3>
         <p>
           This is a simplified Yahtzee game that is available to play either single or multiplayer, built in Pygame. This was a challenge I gave myself to make a game in one day. I made the art/spritesheets in the morning, and worked on the game logic throughout the rest of the day.
           I wanted to work on my animation techniques, so I added the cup shaking with dice dynamically shrinking and growing during the roll. This project has inspired me to challenge myself to make these types of games more often, and learn how to possibly host these games for kids to play for free.
         </p>
-        <div class="video-container">
-          <iframe width="560" height="315"
-                  src="https://www.youtube.com/embed/wPtmT-oP2PQ"
-                  title="Blackjack AI Coach"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-          </iframe>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">Pygame</span>
+          <span class="badge">Animation</span>
         </div>
-        <p>
-          <a href="https://github.com/Isaiah-Swank/Yahtzee.git" target="_blank">View on GitHub</a>
-        </p>
+        <div class="video-container">
+          <div class="yt-lite" data-id="wPtmT-oP2PQ" aria-label="Play video: Yahtzee Multiplayer"></div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Isaiah-Swank/Yahtzee.git" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
       </div>
 
-      <div class="project">
+      <div class="project" data-tags="html5canvas javascript css web gamedesign games">
+        <div class="meta">
+          <span>Role: Front-end</span> · <span>Year: 2023</span>
+        </div>
         <h3>Karate Time - HTML5 Fighter Game</h3>
         <p>
           This was my first ever game project. I coded this using HTML5, CSS, and JavaScript. I created all of the art and animations, which is why the girl character's animation is buggy. I learned the importance of creating spritesheets with equivalent spacing and sizing in order to do proper calculations for the animation.
@@ -182,29 +216,27 @@
           and work on this again, I would redesign the characters to make sure they are the same size, as well as create a separate CSS file to handle all of the styling that is currently hard-coded into the HTML. 
           While this isn't my best project, it is my first, and I am proud of how I have used the lessons from it to improve my other works.
         </p>
-
-        <div class="video-container">
-          <iframe width="560" height="315"
-                  src="https://www.youtube.com/embed/LV010D7lyKE"
-                  title="Mission Demolition"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-          </iframe>
+        <div class="badges">
+          <span class="badge">HTML5 Canvas</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">CSS</span>
         </div>
-        <p>
-          <a href="https://isaiah-swank.github.io/CS413-Assignment-5/" target="_blank">View on GitHub</a> (The GitHub Pages link isn't working.)
-        </p>
+        <div class="video-container">
+          <div class="yt-lite" data-id="LV010D7lyKE" aria-label="Play video: Karate Time"></div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://isaiah-swank.github.io/CS413-Assignment-5/" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="content-section">
-      <h2>Contact</h2>
+      <h2 class="section-title">Contact</h2>
       <p>
         Feel free to reach out via <a href="mailto:swankisaiah@gmail.com">email</a>.
       </p>
       <p>
-        Connect on <a href="https://www.linkedin.com/in/isaiah-swank-4994a02ba" target="_blank">LinkedIn</a>.
+        Connect on <a href="https://www.linkedin.com/in/isaiah-swank-4994a02ba" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
       </p>
     </section>
   </main>
@@ -213,7 +245,10 @@
     <p>&copy; 2025 Isaiah Swank. All rights reserved.</p>
   </footer>
 
-  <!-- Link to the JavaScript file -->
-  <script src="script.js"></script>
+  <!-- Back to top -->
+  <button id="backToTop" class="btn back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- JS -->
+  <script src="scripts/script.js" defer></script>
 </body>
 </html>
